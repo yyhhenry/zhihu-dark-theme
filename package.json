@@ -1,0 +1,21 @@
+{
+  "name": "zhihu-dark-theme",
+  "description": "Enable dark theme for Zhihu",
+  "version": "0.1.0",
+  "author": {
+    "email": "yyhhenry@foxmail.com",
+    "name": "yyhhenry"
+  },
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.9"
+  }
+}
