@@ -1,4 +1,9 @@
 type ThemeType = "light" | "dark";
+
+async function asyncSleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 function getPreferredColorScheme(): ThemeType {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
@@ -6,21 +11,16 @@ function getPreferredColorScheme(): ThemeType {
 }
 
 function getCurrentTheme(): ThemeType {
-  // <html lang="zh" data-hairline="true" class="itcauecng" data-theme="light" data-rh="data-theme">
   const htmlElement = document.documentElement;
   return htmlElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
 }
-async function asyncSleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
 
-async function main() {
+async function syncTheme() {
   const preferredTheme = getPreferredColorScheme();
   const currentTheme = getCurrentTheme();
-
   const url = new URL(window.location.href);
 
-  if (currentTheme != preferredTheme) {
+  if (currentTheme !== preferredTheme) {
     url.searchParams.set("theme", preferredTheme);
     console.log(`Try to reload the page with ${preferredTheme} theme`);
     window.location.replace(url);
@@ -34,4 +34,8 @@ async function main() {
   }
 }
 
-main();
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", syncTheme);
+
+syncTheme();
