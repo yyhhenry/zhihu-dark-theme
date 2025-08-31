@@ -1,7 +1,7 @@
 {
   "name": "zhihu-dark-theme",
   "description": "Enable dark theme for Zhihu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "module": "index.ts",
   "type": "module",
   "private": true,
