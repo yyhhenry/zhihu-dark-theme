@@ -21,6 +21,10 @@ async function syncTheme() {
   const url = new URL(window.location.href);
 
   if (currentTheme !== preferredTheme) {
+    if (url.searchParams.get("theme") === preferredTheme) {
+      console.log(`The page is already in ${preferredTheme} theme`);
+      return;
+    }
     url.searchParams.set("theme", preferredTheme);
     console.log(`Try to reload the page with ${preferredTheme} theme`);
     window.location.replace(url);
