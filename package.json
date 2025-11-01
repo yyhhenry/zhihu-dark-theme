@@ -2,8 +2,8 @@
   "name": "zhihu-dark-theme",
   "description": "Enable dark theme for Zhihu",
   "version": "0.2.2",
+  "license": "MIT",
   "type": "module",
-  "private": true,
   "author": {
     "email": "yyhhenry@foxmail.com",
     "name": "yyhhenry"
