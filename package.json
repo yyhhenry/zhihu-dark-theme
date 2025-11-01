@@ -12,13 +12,8 @@
     "type-check": "tsc --noEmit --skipLibCheck --strict",
     "build": "node build.ts"
   },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
   "dependencies": {
-    "esbuild": "^0.25.9"
+    "esbuild": "^0.25.9",
+    "typescript": "^5.9.3"
   }
 }
