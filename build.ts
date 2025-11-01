@@ -5,7 +5,9 @@ import {
   iconFromDomain,
 } from "./utils/metadata.ts";
 
-const pkg = await import("./package.json", { assert: { type: "json" } });
+import pkg from "./package.json" with { type: "json" };
+
+console.log("Package info:", pkg);
 
 const metadata: ScriptMetadata = {
   name: pkg.name,
