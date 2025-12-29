@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       esbuild:
-        specifier: ^0.25.9
+        specifier: ^0.25.1
         version: 0.25.12
       typescript:
-        specifier: ^5
+        specifier: ^5.9.3
         version: 5.9.3
     devDependencies:
       '@types/node':
