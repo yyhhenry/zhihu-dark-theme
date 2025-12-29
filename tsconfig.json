@@ -5,14 +5,12 @@
     "target": "ESNext",
     "module": "nodenext",
     "moduleDetection": "force",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "resolveJsonModule": true,
 
     // Bundler mode
     "moduleResolution": "nodenext",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
     "noEmit": true,
 
     // Best practices
