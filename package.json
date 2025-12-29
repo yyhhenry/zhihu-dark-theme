@@ -14,7 +14,7 @@
     "build": "node build.ts"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/node": "^24.10.4"
   },
   "peerDependencies": {
     "typescript": "^5"
