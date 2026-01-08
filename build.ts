@@ -4,7 +4,7 @@ import {
   type ScriptMetadata,
   generateBanner,
   iconFromDomain,
-} from "./utils/metadata.ts";
+} from "./utils/metadata";
 
 const metadata: ScriptMetadata = {
   name: pkg.name,
