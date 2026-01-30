@@ -10,13 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
         with:
-          bun-version: latest
-      - name: Install Dependencies
-        run: bun install
-      - name: Build
-        run: bun ./build.ts
+          node-version: 24
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm run type-check
+      - run: pnpm run build
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
