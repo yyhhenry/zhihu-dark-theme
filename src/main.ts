@@ -5,9 +5,7 @@ async function asyncSleep(ms: number) {
 }
 
 function getPreferredColorScheme(): ThemeType {
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 function getCurrentTheme(): ThemeType {
@@ -38,8 +36,6 @@ async function syncTheme() {
   }
 }
 
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", syncTheme);
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncTheme);
 
-syncTheme();
+void syncTheme();
