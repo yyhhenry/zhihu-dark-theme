@@ -1,22 +1,14 @@
 {
   "name": "zhihu-dark-theme",
-  "description": "Enable dark theme for Zhihu",
   "version": "0.2.7",
-  "license": "MIT",
-  "type": "module",
   "private": true,
+  "description": "Enable dark theme for Zhihu",
   "author": {
-    "email": "yyhhenry@foxmail.com",
-    "name": "yyhhenry"
+    "name": "yyhhenry",
+    "email": "yyhhenry@foxmail.com"
   },
-  "scripts": {
-    "type-check": "tsc --noEmit --skipLibCheck --strict",
-    "build": "node build.ts"
-  },
+  "type": "module",
   "devDependencies": {
-    "@types/node": "^24.10.9",
-    "esbuild": "^0.27.2",
-    "typescript": "^5.9.3"
-  },
-  "packageManager": "pnpm@10.28.2"
+    "vite-plus": "catalog:"
+  }
 }
